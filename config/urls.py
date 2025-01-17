@@ -23,15 +23,15 @@ from drf_spectacular.views import (
 )
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('nest24/todo/admin/', admin.site.urls),
 
     # Include authentication endpoints
-    path('api/auth/', include('authentication.urls')),
+    path('nest24/todo/api/auth/', include('authentication.urls')),
 
-    path('api/todos/', include('todo.urls')),
+    path('nest24/todo/api/todos/', include('todo.urls')),
 
     # drf-spectacular routes
-    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
-    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
-    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+    path('nest24/todo/api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('nest24/todo/api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('nest24/todo/api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 ]
